@@ -1076,7 +1076,7 @@ components:
           description: Name of the link
     AccountResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1122,7 +1122,7 @@ components:
       description: An event is created everytime something interesting is happening
         in Front.
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1207,7 +1207,7 @@ components:
           description: The conversation on which the event happened
     IdentityResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1221,7 +1221,7 @@ components:
           description: Name of company
     AnalyticsExportResponse2:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1348,7 +1348,7 @@ components:
                 description: End of the interval
     AnalyticsResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             related:
@@ -1387,7 +1387,7 @@ components:
             metric_type: time_graph
     ExportResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1462,7 +1462,7 @@ components:
                 is used in the message body
     MessageTemplateFolderResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1484,7 +1484,7 @@ components:
           example: PTO templates
     MessageTemplateResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1531,7 +1531,7 @@ components:
             example:
     ContactGroupResponses:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1569,7 +1569,7 @@ components:
           description: Date at which the note have been created
     ChannelResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1636,7 +1636,7 @@ components:
           description: Whether or not the channel configuration is valid
     CommentResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1670,7 +1670,7 @@ components:
           description: List of files attached to the comment
     ContactResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1726,7 +1726,7 @@ components:
           description: Whether or not the contact is individual
     ConversationResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1808,7 +1808,7 @@ components:
                 type: string
     CustomFieldResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1833,7 +1833,7 @@ components:
           - number
     InboxResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1865,7 +1865,7 @@ components:
           description: Whether or not the inbox is individual
     MessageResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -1986,7 +1986,7 @@ components:
                 information.
     RecipientResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             related:
@@ -2009,7 +2009,7 @@ components:
           - bcc
     Reminder:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             related:
@@ -2030,7 +2030,7 @@ components:
           description: Timestamp at which the conversation reminder has been updated
     RoleResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             related:
@@ -2047,7 +2047,7 @@ components:
           description: Name of the role
     RuleResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -2076,7 +2076,7 @@ components:
     ShiftResponse:
       type: object
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -2116,7 +2116,7 @@ components:
       type: object
       description: A tag is a label that can be used to classify conversations.
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -2167,7 +2167,7 @@ components:
           description: Timestamp of the last tag update
     TeamResponse:
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -2192,7 +2192,7 @@ components:
     TeammateResponse:
       description: A teammate is a user in Front.
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -2235,7 +2235,7 @@ components:
       type: object
       description: A link used to connect a Front conversation to an external resource.
       properties:
-        _links:
+        resource_links:
           type: object
           properties:
             self:
@@ -2388,7 +2388,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2411,7 +2411,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2428,7 +2428,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2445,7 +2445,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2462,7 +2462,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2479,7 +2479,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2496,7 +2496,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2519,7 +2519,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2542,7 +2542,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2559,7 +2559,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2576,7 +2576,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2599,7 +2599,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2622,7 +2622,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2665,7 +2665,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2682,7 +2682,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2699,7 +2699,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2716,7 +2716,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2733,7 +2733,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2750,7 +2750,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2767,7 +2767,7 @@ components:
           schema:
             type: object
             properties:
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -2790,7 +2790,7 @@ components:
                   next:
                     type: string
                     description: Link to next page of results
-              _links:
+              resource_links:
                 type: object
                 properties:
                   self:
@@ -3541,19 +3541,19 @@ paths:
         '201':
           "$ref": "#/components/responses/cannedAnswer"
   "/teams/{team_id}/message_templates":
+    parameters:
+    - in: path
+      name: team_id
+      required: true
+      description: The team ID
+      schema:
+        type: string
+        default: tim_55c8c149
     get:
       summary: List team message templates
       description: List the message templates belonging to the requested team.
       tags:
       - Message Templates
-      parameters:
-      - in: path
-        name: team_id
-        required: true
-        description: The team ID
-        schema:
-          type: string
-          default: tim_55c8c149
       responses:
         '200':
           "$ref": "#/components/responses/listOfCannedAnswers"
@@ -3572,19 +3572,19 @@ paths:
         '201':
           "$ref": "#/components/responses/cannedAnswer"
   "/teammates/{teammate_id}/message_templates":
+    parameters:
+    - in: path
+      name: teammate_id
+      required: true
+      description: The teammate ID
+      schema:
+        type: string
+        default: tea_123
     get:
       summary: List teammate message templates
       description: List the message templates belonging to the requested teammate.
       tags:
       - Message Templates
-      parameters:
-      - in: path
-        name: teammate_id
-        required: true
-        description: The teammate ID
-        schema:
-          type: string
-          default: tea_123
       responses:
         '200':
           "$ref": "#/components/responses/listOfCannedAnswers"
@@ -4985,6 +4985,14 @@ paths:
       description: Fetch a message.
       tags:
       - Messages
+      parameters:
+      - in: path
+        name: message_id
+        required: true
+        description: The draft ID
+        schema:
+          type: string
+          default: msg_123
       responses:
         '200':
           "$ref": "#/components/responses/message"
