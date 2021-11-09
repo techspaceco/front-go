@@ -371,6 +371,9 @@ components:
               "$ref": "#/components/schemas/ContactHandle"
     Contact:
       properties:
+        id:
+          type: string
+          description: Unique identifier of the contact
         name:
           type: string
           description: Contact name
@@ -401,6 +404,17 @@ components:
           description: Custom field attributes for this contact. Leave empty if you
             do not wish to update the attributes. Not sending existing attributes
             will automatically remove them.
+    ContactGroup:
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the group
+        name:
+          type: string
+          description: Name of the group
+        is_private:
+          type: boolean
+          description: Whether or not the contact is individual
     DeleteContactHandle:
       allOf:
       - "$ref": "#/components/schemas/ContactHandle"
