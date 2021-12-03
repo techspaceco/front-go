@@ -106,6 +106,9 @@ components:
     Account:
       type: object
       properties:
+        id:
+          type: string
+          description: Unique identifier of the account
         name:
           type: string
           description: Name of the Account
