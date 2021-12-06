@@ -1130,10 +1130,10 @@ components:
           type: object
           description: Custom Attributes for this account
         created_at:
-          type: integer
+          type: number
           description: Timestamp when the account was created
         updated_at:
-          type: integer
+          type: number
           description: Timestamp when the account was updated
     EventResponse:
       description: An event is created everytime something interesting is happening
