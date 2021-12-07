@@ -36,6 +36,86 @@ func (m *MockClientWithResponsesInterface) EXPECT() *MockClientWithResponsesInte
 	return m.recorder
 }
 
+// CreateAnalyticsExportWithBodyWithResponse mocks base method.
+func (m *MockClientWithResponsesInterface) CreateAnalyticsExportWithBodyWithResponse(arg0 context.Context, arg1 string, arg2 io.Reader, arg3 ...front.RequestEditorFn) (*front.CreateAnalyticsExportResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateAnalyticsExportWithBodyWithResponse", varargs...)
+	ret0, _ := ret[0].(*front.CreateAnalyticsExportResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateAnalyticsExportWithBodyWithResponse indicates an expected call of CreateAnalyticsExportWithBodyWithResponse.
+func (mr *MockClientWithResponsesInterfaceMockRecorder) CreateAnalyticsExportWithBodyWithResponse(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyticsExportWithBodyWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).CreateAnalyticsExportWithBodyWithResponse), varargs...)
+}
+
+// CreateAnalyticsExportWithResponse mocks base method.
+func (m *MockClientWithResponsesInterface) CreateAnalyticsExportWithResponse(arg0 context.Context, arg1 front.CreateAnalyticsExportJSONRequestBody, arg2 ...front.RequestEditorFn) (*front.CreateAnalyticsExportResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateAnalyticsExportWithResponse", varargs...)
+	ret0, _ := ret[0].(*front.CreateAnalyticsExportResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateAnalyticsExportWithResponse indicates an expected call of CreateAnalyticsExportWithResponse.
+func (mr *MockClientWithResponsesInterfaceMockRecorder) CreateAnalyticsExportWithResponse(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyticsExportWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).CreateAnalyticsExportWithResponse), varargs...)
+}
+
+// CreateAnalyticsReportWithBodyWithResponse mocks base method.
+func (m *MockClientWithResponsesInterface) CreateAnalyticsReportWithBodyWithResponse(arg0 context.Context, arg1 string, arg2 io.Reader, arg3 ...front.RequestEditorFn) (*front.CreateAnalyticsReportResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateAnalyticsReportWithBodyWithResponse", varargs...)
+	ret0, _ := ret[0].(*front.CreateAnalyticsReportResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateAnalyticsReportWithBodyWithResponse indicates an expected call of CreateAnalyticsReportWithBodyWithResponse.
+func (mr *MockClientWithResponsesInterfaceMockRecorder) CreateAnalyticsReportWithBodyWithResponse(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyticsReportWithBodyWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).CreateAnalyticsReportWithBodyWithResponse), varargs...)
+}
+
+// CreateAnalyticsReportWithResponse mocks base method.
+func (m *MockClientWithResponsesInterface) CreateAnalyticsReportWithResponse(arg0 context.Context, arg1 front.CreateAnalyticsReportJSONRequestBody, arg2 ...front.RequestEditorFn) (*front.CreateAnalyticsReportResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateAnalyticsReportWithResponse", varargs...)
+	ret0, _ := ret[0].(*front.CreateAnalyticsReportResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateAnalyticsReportWithResponse indicates an expected call of CreateAnalyticsReportWithResponse.
+func (mr *MockClientWithResponsesInterfaceMockRecorder) CreateAnalyticsReportWithResponse(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyticsReportWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).CreateAnalyticsReportWithResponse), varargs...)
+}
+
 // CreateExportWithBodyWithResponse mocks base method.
 func (m *MockClientWithResponsesInterface) CreateExportWithBodyWithResponse(arg0 context.Context, arg1 string, arg2 io.Reader, arg3 ...front.RequestEditorFn) (*front.CreateExportResponse, error) {
 	m.ctrl.T.Helper()
@@ -614,6 +694,46 @@ func (mr *MockClientWithResponsesInterfaceMockRecorder) GetAccountsWithResponse(
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccountsWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).GetAccountsWithResponse), varargs...)
+}
+
+// GetAnalyticsExportWithResponse mocks base method.
+func (m *MockClientWithResponsesInterface) GetAnalyticsExportWithResponse(arg0 context.Context, arg1 string, arg2 ...front.RequestEditorFn) (*front.GetAnalyticsExportResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAnalyticsExportWithResponse", varargs...)
+	ret0, _ := ret[0].(*front.GetAnalyticsExportResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAnalyticsExportWithResponse indicates an expected call of GetAnalyticsExportWithResponse.
+func (mr *MockClientWithResponsesInterfaceMockRecorder) GetAnalyticsExportWithResponse(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyticsExportWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).GetAnalyticsExportWithResponse), varargs...)
+}
+
+// GetAnalyticsReportWithResponse mocks base method.
+func (m *MockClientWithResponsesInterface) GetAnalyticsReportWithResponse(arg0 context.Context, arg1 string, arg2 ...front.RequestEditorFn) (*front.GetAnalyticsReportResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAnalyticsReportWithResponse", varargs...)
+	ret0, _ := ret[0].(*front.GetAnalyticsReportResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAnalyticsReportWithResponse indicates an expected call of GetAnalyticsReportWithResponse.
+func (mr *MockClientWithResponsesInterfaceMockRecorder) GetAnalyticsReportWithResponse(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyticsReportWithResponse", reflect.TypeOf((*MockClientWithResponsesInterface)(nil).GetAnalyticsReportWithResponse), varargs...)
 }
 
 // GetAnalyticsWithResponse mocks base method.
