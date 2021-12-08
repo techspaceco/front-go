@@ -1,61 +1,44 @@
 package front
 
 import (
-	"context"
-	"net"
 	"net/http"
-	"time"
 
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/clientcredentials"
+	"github.com/hashicorp/go-retryablehttp"
+	"golang.org/x/time/rate"
 )
-
-const TokenURL = "https://app.frontapp.com/oauth/token"
-
-// WithCredentials oauth2 HTTP client.
-func WithCredentials(id, secret string) ClientOption {
-	config := &clientcredentials.Config{
-		ClientID:     id,
-		ClientSecret: secret,
-		TokenURL:     TokenURL,
-		AuthStyle:    oauth2.AuthStyleInHeader,
-	}
-
-	return WithHTTPClient(config.Client(context.TODO()))
-}
 
 type transport struct {
 	bearer    string
+	limiter   *rate.Limiter
 	transport http.RoundTripper
 }
 
 func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
-	// start := time.Now()
-	req.Header.Set("Authorization", "Bearer "+t.bearer)
-	res, err := t.transport.RoundTrip(req)
-	if err != nil {
-		// TODO: Logging?
-		// log.Printf("ERR %s %s\n", req.URL.String(), err)
-		return res, err
+	if err := t.limiter.Wait(req.Context()); err != nil {
+		return nil, err
 	}
 
-	// TODO: Logging?
-	// log.Printf("%d %s %s\n", res.StatusCode, req.URL.String(), time.Since(start))
-	return res, err
+	req.Header.Set("Authorization", "Bearer "+t.bearer)
+	return t.transport.RoundTrip(req)
 }
 
-// With bearer token.
-func WithAuthorizationToken(token string) ClientOption {
-	client := &http.Client{
-		Transport: &transport{
-			bearer: token,
-			transport: &http.Transport{
-				Dial: (&net.Dialer{Timeout: 5 * time.Second}).Dial,
-			},
-		},
+// WithFrontClient creates a Front compatible client.
+//
+// It handles injection of the Front bearer token, API backoff requests and rate limits.
+// See https://dev.frontapp.com/docs/rate-limiting
+func WithFrontClient(token string, limit float64) ClientOption {
+	// The retryablehttp client is used to handle Retry-After headers.
+	client := retryablehttp.NewClient()
+	client.RetryMax = 1
+
+	// Injects the authorization bearer token header into every request.
+	client.HTTPClient.Transport = &transport{
+		bearer:    token,
+		limiter:   rate.NewLimiter(rate.Limit(limit), 1),
+		transport: client.HTTPClient.Transport,
 	}
 
-	return WithHTTPClient(client)
+	return WithHTTPClient(client.StandardClient())
 }
 
 // StringParam creates a string pointer for optional params.
